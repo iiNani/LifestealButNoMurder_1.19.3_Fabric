@@ -26,10 +26,7 @@ public class HeartContainerItem extends Item {
             Objects.requireNonNull(user.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH)).
                     addPersistentModifier(new EntityAttributeModifier(user.getEntityName(),
                     2, EntityAttributeModifier.Operation.ADDITION));
-            Objects.requireNonNull(world.getServer()).getCommandManager().execute(
-                    world.getServer().getCommandManager().getDispatcher().parse(
-                    "clear " + user.getEntityName() + " healththeft:heart_container 1",
-                    world.getServer().getCommandSource()), "clear " + user + " healththeft:heart_container 1");
+            user.getStackInHand(Hand.MAIN_HAND).setCount(user.getStackInHand(Hand.MAIN_HAND).getCount() - 1);
         }
         return super.use(world, user, hand);
     }

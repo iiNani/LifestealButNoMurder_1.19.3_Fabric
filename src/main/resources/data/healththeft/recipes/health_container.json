@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "n": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "ooo",
+    "ono",
+    "ooo"
+  ],
+  "result": {
+    "item": "healththeft:heart_container"
+  }
+}
