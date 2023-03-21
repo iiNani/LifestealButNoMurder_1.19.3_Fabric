@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "healththeft",
+  "version": "${version}",
+
+  "name": "Health Theft",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "iiNani"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.iinani.healththeft.HealthTheft"
+    ],
+    "client": [
+      "net.iinani.healththeft.HealthTheftClient"
+    ]
+  },
+  "mixins": [
+    "healththeft.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
